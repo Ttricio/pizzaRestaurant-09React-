@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+.container {
+	height: 100px;
+	padding: 0 50px;
+	background-color: #ffa62b;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	font-family: "Nerko One", cursive;
+	font-size: 24px;
+	@media (max-width: 808px) {
+		font-size: 18px;
+	}
+
+	.phone {
+		display: flex;
+		align-items: center;
+		@media (max-width: 667px) {
+			display: none;
+		}
+	}
+	.callButton {
+		background-color: white;
+		border-radius: 50%;
+		padding: 10px;
+		width: 50px;
+		height: 50px;
+		@media (max-width: 808px) {
+			width: 30px;
+			height: 30px;
+		}
+		img {
+			width: 100%;
+		}
+		@media (max-width: 667px) {
+			width: 20px;
+			height: 20px;
+			display: none;
+		}
+	}
+	a {
+		text-decoration: none;
+		color: inherit;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+.item {
+	flex: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@media (min-width: 1300px) {
+		width: 100%;
+		flex: 3;
+		justify-content: center;
+	}
+	@media (max-width: 808px) {
+		width: 30%;
+		justify-content: center;
+	}
+	@media (max-width: 667px) {
+		width: 100%;
+		justify-content: space-around;
+	}
+	@media (max-width: 548px) {
+		width: 100%;
+		justify-content: center;
+		font-size: 16px;
+	}
+	.list {
+		@media (max-width: 408px) {
+			display: none;
+		}
+		@media (min-width: 1300px) {
+			width: 60%;
+			justify-content: space-around;
+		}
+		@media (max-width: 808px) {
+			width: auto;
+			justify-content: center;
+		}
+	}
+}
+
+.texts {
+	margin-left: 20px;
+	color: white;
+}
+
+.text:first-child {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.text:last-child {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.list {
+	padding: 0;
+	display: flex;
+	align-items: center;
+	list-style: none;
+	color: white;
+}
+
+.listItem {
+	margin-right: 20px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.cart {
+	position: relative;
+}
+
+.counter {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: white;
+	padding: 3px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	color: #d1411e;
+}

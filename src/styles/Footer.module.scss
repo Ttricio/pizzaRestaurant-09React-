@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+
+.container {
+	height: calc(100vh - 100px);
+	font-family: "Nerko One", cursive;
+
+	background-color: #222;
+	display: flex;
+	width: 100%;
+	overflow: hidden;
+}
+
+.item {
+	flex: 1;
+	position: relative;
+	display: flex;
+	img {
+		object-fit: fill;
+		min-height: 100%;
+		min-width: 100%;
+	}
+	.cover {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.6);
+	}
+}
+
+.item:last-child {
+	flex: 2;
+	padding: 50px;
+	justify-content: space-between;
+}
+
+.card {
+	flex: 1;
+	padding: 0 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.title {
+	font-size: 18px;
+	color: #b7903c;
+  justify-content: center;
+}
+
+.text {
+	color: lightgray;
+}
+
+.motto {
+	color: rgb(211, 211, 211);
+	text-transform: uppercase;
+	font-size: 30px;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+	.container {
+		height: auto;
+		text-align: center;
+	}
+	.item:first-child {
+		display: none;
+	}
+
+	.item {
+		flex-direction: column;
+	}
+
+	.title {
+		font-size: 30px;
+	}
+
+	.text {
+		font-size: 20px;
+	}
+}
